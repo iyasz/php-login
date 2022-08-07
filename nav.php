@@ -14,7 +14,7 @@
   <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
   <div class="container-fluid">
-    <a class="navbar-brand text-light h1 mb-0" href="#">FavNime</a>
+    <a class="navbar-brand text-light h1 mb-0 ps-1" href="#">FavNime</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -26,7 +26,7 @@
         <li class="nav-item">
           <a class="nav-link text-light" href="#">Terbaru</a>
         </li>
-        <li class="nav-item text-light">
+        <li class="nav-item ">
           <a class="nav-link text-light" href="#">Terpopuler</a>
         </li>
         <li class="nav-item dropdown ">
@@ -35,9 +35,9 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-dark">
             <li><a class="dropdown-item text-light" href="#">Action</a></li>
-            <li><a class="dropdown-item text-light" href="#">Another action</a></li>
+            <li><a class="dropdown-item text-light" href="#">Romance</a></li>
             <li><hr class="dropdown-divider bg-secondary"></li>
-            <li><a class="dropdown-item text-light" href="#">Something else here</a></li>
+            <li><a class="dropdown-item text-light" href="#">Lebih Banyak</a></li>
           </ul>
         </li>
       </ul>
