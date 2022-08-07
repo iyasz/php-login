@@ -12,7 +12,7 @@
     
   </head>
   <body>
-  <nav class="navbar navbar-expand-lg bg-dark ">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
   <div class="container-fluid">
     <a class="navbar-brand text-light h1 mb-0" href="#">FavNime</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,14 +24,14 @@
           <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="#">Features</a>
+          <a class="nav-link text-light" href="#">Terbaru</a>
         </li>
         <li class="nav-item text-light">
-          <a class="nav-link text-light" href="#">Pricing</a>
+          <a class="nav-link text-light" href="#">Anime tamat</a>
         </li>
         <li class="nav-item dropdown ">
           <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown link
+            Genre
           </a>
           <ul class="dropdown-menu bg-dark">
             <li><a class="dropdown-item text-light" href="#">Action</a></li>
