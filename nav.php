@@ -27,13 +27,13 @@
           <a class="nav-link text-light" href="#">Terbaru</a>
         </li>
         <li class="nav-item text-light">
-          <a class="nav-link text-light" href="#">Anime tamat</a>
+          <a class="nav-link text-light" href="#">Terpopuler</a>
         </li>
         <li class="nav-item dropdown ">
           <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Genre
           </a>
-          <ul class="dropdown-menu bg-dark">
+          <ul class="dropdown-menu dropdown-menu-dark">
             <li><a class="dropdown-item text-light" href="#">Action</a></li>
             <li><a class="dropdown-item text-light" href="#">Another action</a></li>
             <li><hr class="dropdown-divider bg-secondary"></li>
