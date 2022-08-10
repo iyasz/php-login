@@ -43,6 +43,9 @@
         
         <span class="navbar-text">
         <a class="" href="#"><i class="bi bi-facebook"></i></a>
+        <a class="" href="#"><i class="bi bi-instagram"></i></a>
+        <a class="" href="#"><i class="bi bi-twitter"></i></a>
+        <a class="" href="#"><i class="bi bi-discord"></i></a>
       </span>
       </ul>
     </div>
