@@ -21,7 +21,7 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+          <a class="nav-link active text-light" aria-current="page" href="#">Home </a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-light" href="#">Terbaru</a>
@@ -40,6 +40,10 @@
             <li><a class="dropdown-item" href="#">Lebih Banyak</a></li>
           </ul>
         </li>
+        
+        <span class="navbar-text">
+        <a class="" href="#"><i class="bi bi-facebook"></i></a>
+      </span>
       </ul>
     </div>
   </div>
