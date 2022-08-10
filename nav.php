@@ -34,10 +34,10 @@
             Genre
           </a>
           <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item text-light" href="#">Action</a></li>
-            <li><a class="dropdown-item text-light" href="#">Romance</a></li>
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item " href="#">Romance</a></li>
             <li><hr class="dropdown-divider bg-secondary"></li>
-            <li><a class="dropdown-item text-light" href="#">Lebih Banyak</a></li>
+            <li><a class="dropdown-item" href="#">Lebih Banyak</a></li>
           </ul>
         </li>
       </ul>
