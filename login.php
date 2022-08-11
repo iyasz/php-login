@@ -15,9 +15,9 @@
 </head>
 <body>
     <form action="" method="post">
-        <input type="text" name="email" >
-        <input type="password" name="pw">
-        <button type="masuk">Masuk</button>
+        <input type="text" name="email" placeholder="Masukan Email Anda" >
+        <input type="password" name="pw" placeholder="Masukan Password Anda">
+        <button class="btn btn-primary" type="masuk">Masuk</button>
     </form>
 
 
