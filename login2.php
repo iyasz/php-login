@@ -26,6 +26,7 @@
     <form action="" method="post">
         <input type="text" name="email" placeholder="Masukan Email ">
         <input type="password" name="pw" placeholder="Masukan Password ">
+        <h4><?php $alert ?></h4>
         <button class="btn btn-primary" type="submit" name="btn-msk">Masuk</button>
     </form>
     
