@@ -3,7 +3,11 @@
 $conn = mysqli_connect('localhost', 'root', '', 'db_logintest');
 
 if(isset($_POST['submit'])){
-    echo 'anjime';
+    $username = htmlspecialchars($_POST['email']);
+    $password = htmlspecialchars($_POST['pw']);
+    if($username == "" or $password == ""){
+        $alert = "Masukan ANime";
+    }
 }
 
 ?>
@@ -22,6 +26,9 @@ if(isset($_POST['submit'])){
     <form action="" method="post">
         <input type="text" name="email" placeholder="Masukan Email Anda" >
         <input type="password" name="pw" placeholder="Masukan Password Anda">
+        <h4><?php if(isset($alert)) {
+            echo "$alert";
+        } ?></h4>
         <button class="btn btn-primary" type="masuk" name="submit">Masuk</button>
     </form>
 
