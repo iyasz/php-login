@@ -1,5 +1,11 @@
 <?php
 
+    $conn = mysqli_connect('localhost', 'root', '', 'db_logintest');
+
+    if(isset($_POST['btn-msk'])){
+        echo "yasz";
+    }
+
  ?>
 
  <!DOCTYPE html>
