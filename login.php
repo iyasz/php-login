@@ -1,11 +1,11 @@
 <?php 
 
 $conn = mysqli_connect('localhost', 'root', '', 'db_logintest');
-if(isset($_POST['submit'])) {
-    echo "anime";
 
-    
+if(isset($_POST['submit'])){
+    echo 'anjime';
 }
+
 ?>
 
 
