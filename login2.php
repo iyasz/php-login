@@ -1,14 +1,6 @@
 <?php
 
-    $conn = mysqli_connect('localhost', 'root', '', 'db_logintest');
 
-    if(isset($_POST['btn-msk'])){
-        $username = htmlspecialchars($_POST['email']);
-        $password = htmlspecialchars($_POST['pw']);
-        if($username == "" Or $password == ""){
-            $alert = "Masukan Email Dan Password";
-        }
-    }
 
  ?>
 
@@ -23,12 +15,7 @@
 
  </head>
  <body>
-    <form action="" method="post">
-        <input type="text" name="email" placeholder="Masukan Email ">
-        <input type="password" name="pw" placeholder="Masukan Password ">
-        <h4><?php echo "$alert" ?></h4>
-        <button class="btn btn-primary" type="submit" name="btn-msk">Masuk</button>
-    </form>
+
     
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script>
