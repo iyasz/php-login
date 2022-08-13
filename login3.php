@@ -3,7 +3,11 @@
 $conn = mysqli_connect('localhost', 'root', '', 'db_logintest');
 
 if(isset($_POST['sbt'])){
-    echo "yasz";
+    $username = htmlspecialchars($_POST['email']);
+    $password = htmlspecialchars($_POST['pw']);
+    if ($username == "" && $password = ""){
+        $alert = "Masukkan Email Dan Password Anda";
+    }
 }
 
 ?>
