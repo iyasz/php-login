@@ -26,9 +26,9 @@ if(isset($_POST['sbt'])){
     <form action="" method="post">
         <input type="text" name="email" placeholder="Masukan Email Anda">
         <input type="password" name="pw" placeholder="Masukan Password Anda" >
-        <h4><?php if(isset($alert)){
+        <p><?php if(isset($alert)){
             echo $alert;
-        } ?></h4>
+        } ?></p>
         
         <button class="btn btn-primary" type="submit" name="sbt">Masuk</button>
     </form>
