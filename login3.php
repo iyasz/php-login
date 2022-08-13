@@ -5,7 +5,7 @@ $conn = mysqli_connect('localhost', 'root', '', 'db_logintest');
 if(isset($_POST['sbt'])){
     $username = htmlspecialchars($_POST['email']);
     $password = htmlspecialchars($_POST['pw']);
-    if ($username == "" && $password = ""){
+    if ($username == "" or $password = ""){
         $alert = "Masukkan Email Dan Password Anda";
     }
 }
@@ -26,6 +26,10 @@ if(isset($_POST['sbt'])){
     <form action="" method="post">
         <input type="text" name="email" placeholder="Masukan Email Anda">
         <input type="password" name="pw" placeholder="Masukan Password Anda" >
+        <h4><?php if(isset($alert)){
+            echo $alert;
+        } ?></h4>
+        
         <button class="btn btn-primary" type="submit" name="sbt">Masuk</button>
     </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
