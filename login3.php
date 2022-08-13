@@ -11,6 +11,10 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <form action="" method="post">
+        <input type="text" name="email" placeholder="Masukan Email Anda">
+        <input type="password" name="pw" placeholder="Masukan Password Anda" >
+        <button type="submit" name="sbt">Masuk</button>
+    </form>
 </body>
 </html>
