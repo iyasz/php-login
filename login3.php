@@ -2,6 +2,10 @@
 
 $conn = mysqli_connect('localhost', 'root', '', 'db_logintest');
 
+if(isset($_POST['btn-log'])){
+    echo "yasz";
+}
+
 ?>
 
 <!DOCTYPE html>
