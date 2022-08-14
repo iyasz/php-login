@@ -26,6 +26,7 @@ if(isset($_POST['btn-log'])){
     <form action="" method="post">
         <input type="text" name="username" placeholder="Masukan Username">
         <input type="password" name="pw" placeholder="Masukan Password">
+        <p><?php  ?></p>
         <button class="btn btn-primary" type="submit" name="btn-log" >Login</button>
     </form>
     
