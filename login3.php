@@ -3,7 +3,11 @@
 $conn = mysqli_connect('localhost', 'root', '', 'db_logintest');
 
 if(isset($_POST['btn-log'])){
-    echo "yasz";
+    $username = htmlspecialchars($_POST['username']);
+    $password = htmlspecialchars($_POST['pw']);
+    if($username == "" or $password == ""){
+        $alert = "Masukan Username dan Password";
+    }
 }
 
 ?>
