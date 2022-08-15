@@ -6,7 +6,7 @@ if(isset($_POST['submit'])){
     $username = htmlspecialchars($_POST['email']);
     $password = htmlspecialchars($_POST['pw']);
     if($username == "" or $password == ""){
-        $alert = "Masukan ANime";
+        $alert = "Masukan Email Dan Password";
     }
 }
 
@@ -26,9 +26,9 @@ if(isset($_POST['submit'])){
     <form action="" method="post">
         <input type="text" name="email" placeholder="Masukan Email Anda" >
         <input type="password" name="pw" placeholder="Masukan Password Anda">
-        <h4><?php if(isset($alert)) {
+        <p><?php if(isset($alert)) {
             echo "$alert";
-        } ?></h4>
+        } ?></p>
         <button class="btn btn-primary" type="masuk" name="submit">Masuk</button>
     </form>
 
