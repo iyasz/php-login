@@ -29,16 +29,15 @@ if (isset($_POST['submit'])) {
     <style>
         .alert {
             color: red;
-            font-size: 14px;
+            font-size: 13px;
+            letter-spacing: 0.4px;
             position: relative;
             z-index: 3;
             top: -14px;
         }
-        .userinp:focus > .userlab   {
-            font-size: 12px;
-        }
 
-        .forminp .pasinp,.forminp .userinp {
+        .forminp .pasinp,
+        .forminp .userinp {
             border: none;
             border-bottom: solid 2px #d9d9d9;
             border-radius: 0;
@@ -47,6 +46,25 @@ if (isset($_POST['submit'])) {
 
         .forminp:focus .userinp {
             border: none;
+        }
+
+        .useric, .pasic {
+            font-size: 15px;
+            opacity: 60%;
+        }
+
+        .btn-msk {
+            background: #293462;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            color: whitesmoke;
+            padding: 6px 19vh;
+            border-radius: 25px;
+        }
+
+        .btn-msk:hover {
+            background: #293470;
         }
     </style>
 
@@ -58,23 +76,18 @@ if (isset($_POST['submit'])) {
                         <h1>Login</h1>
                     </div>
                     <div class="card-body">
-                        <form class="forminp" action="" method="post">         
+                        <form class="forminp" action="" method="post">
                             <label for="username" class="pb-1 userlab">Username</label>
-                            <div class="row">
-                                <div class="col-lg-1">
-                                    <i class="bi bi-person-fill"></i>
-                                </div>
-                                <div class="col-lg-">
-                                    <input type="text" autocomplete="no" id="username" class="form-control mb-3 userinp" name="username" placeholder="Masukan Username Anda">
-                                </div>
-                            </div>
+                            <i class="bi bi-person-fill useric"></i>
+                            <input type="text" autocomplete="no" id="username" class="form-control mb-3 userinp" name="username" placeholder="Masukan Username Anda">
                             <label for="pw" class="pb-1 paslab">Password</label>
+                            <i class="bi bi-lock pasic"></i>
                             <input type="password" class="form-control pasinp" id="pw" name="pw" placeholder="Masukan Password Anda">
                             <p class="alert"><?php if (isset($alert)) {
                                                     echo "$alert";
                                                 } ?></p>
-                            <div class="form-group text-end">
-                                <button class="btn btn-primary " type="masuk" name="submit">Masuk</button>
+                            <div class="form-group text-center">
+                                <button class="btn btn-primary btn-msk" type="masuk" name="submit">Masuk</button>
                             </div>
                         </form>
                     </div>
