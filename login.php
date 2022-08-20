@@ -33,6 +33,19 @@ if (isset($_POST['submit'])) {
             z-index: 3;
             top: -14px;
         }
+        .userinp:focus   {
+            font-size: 12px;
+        }
+
+        .forminp {
+            position: relative;
+            display: grid;
+            border: none;
+        }
+
+        .forminp:focus .userinp {
+            border: none;
+        }
     </style>
 
     <div class="container mt-5">
@@ -43,9 +56,9 @@ if (isset($_POST['submit'])) {
                         <h1>Login</h1>
                     </div>
                     <div class="card-body">
-                        <form action="" method="post">
-                            <label for="username" class="pb-1">Username</label>
-                            <input type="text" autocomplete="no" id="username" class="form-control mb-3" name="username" placeholder="Masukan Username Anda">
+                        <form class="forminp" action="" method="post">
+                            <label for="username" class="pb-1 userlab">Username</label>
+                            <input type="text" autocomplete="no" id="username" class="form-control mb-3 userinp" name="username" placeholder="Masukan Username Anda">
                             <label for="pw" class="pb-1">Password</label>
                             <input type="password" class="form-control" id="pw" name="pw" placeholder="Masukan Password Anda">
                             <p class="alert"><?php if (isset($alert)) {
