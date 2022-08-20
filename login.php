@@ -3,7 +3,7 @@
 $conn = mysqli_connect('localhost', 'root', '', 'db_logintest');
 
 if (isset($_POST['submit'])) {
-    $username = htmlspecialchars($_POST['email']);
+    $username = htmlspecialchars($_POST['username']);
     $password = htmlspecialchars($_POST['pw']);
     if ($username == "" or $password == "") {
         $alert = "Masukan Email Dan Password";
@@ -25,23 +25,35 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
+    <style>
+        .alert {
+            color: red;
+            font-size: 14px;
+            position: relative;
+            z-index: 3;
+            top: -14px;
+        }
+    </style>
 
     <div class="container mt-5">
         <div class="row justify-content-center">
-            <div class="col-xl-6">
+            <div class="col-md-5">
                 <div class="card shadow-lg">
                     <div class="card-header text-bg-dark ps-3">
                         <h1>Login</h1>
                     </div>
                     <div class="card-body">
                         <form action="" method="post">
-                            <label for="username"></label>
-                            <input type="text" id="username" class="form-control" name="email" placeholder="Masukan Email Anda">
-                            <input type="password" name="pw" placeholder="Masukan Password Anda">
-                            <p><?php if (isset($alert)) {
-                                    echo "$alert";
-                                } ?></p>
-                            <button class="btn btn-primary" type="masuk" name="submit">Masuk</button>
+                            <label for="username" class="pb-1">Username</label>
+                            <input type="text" autocomplete="no" id="username" class="form-control mb-3" name="username" placeholder="Masukan Username Anda">
+                            <label for="pw" class="pb-1">Password</label>
+                            <input type="password" class="form-control" id="pw" name="pw" placeholder="Masukan Password Anda">
+                            <p class="alert"><?php if (isset($alert)) {
+                                                    echo "$alert";
+                                                } ?></p>
+                            <div class="form-group text-end">
+                                <button class="btn btn-primary " type="masuk" name="submit">Masuk</button>
+                            </div>
                         </form>
                     </div>
                 </div>
