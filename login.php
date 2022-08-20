@@ -22,6 +22,7 @@ if (isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -37,10 +38,11 @@ if (isset($_POST['submit'])) {
             font-size: 12px;
         }
 
-        .forminp {
-            position: relative;
-            display: grid;
+        .forminp .pasinp,.forminp .userinp {
             border: none;
+            border-bottom: solid 2px #d9d9d9;
+            border-radius: 0;
+            box-shadow: none;
         }
 
         .forminp:focus .userinp {
@@ -56,12 +58,18 @@ if (isset($_POST['submit'])) {
                         <h1>Login</h1>
                     </div>
                     <div class="card-body">
-                        <form class="forminp" action="" method="post">
-                            
+                        <form class="forminp" action="" method="post">         
                             <label for="username" class="pb-1 userlab">Username</label>
-                            <input type="text" autocomplete="no" id="username" class="form-control mb-3 userinp" name="username" placeholder="Masukan Username Anda">
-                            <label for="pw" class="pb-1">Password</label>
-                            <input type="password" class="form-control" id="pw" name="pw" placeholder="Masukan Password Anda">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <i class="bi bi-person-fill"></i>
+                                </div>
+                                <div class="col-lg-">
+                                    <input type="text" autocomplete="no" id="username" class="form-control mb-3 userinp" name="username" placeholder="Masukan Username Anda">
+                                </div>
+                            </div>
+                            <label for="pw" class="pb-1 paslab">Password</label>
+                            <input type="password" class="form-control pasinp" id="pw" name="pw" placeholder="Masukan Password Anda">
                             <p class="alert"><?php if (isset($alert)) {
                                                     echo "$alert";
                                                 } ?></p>
