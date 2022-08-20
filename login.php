@@ -33,7 +33,7 @@ if (isset($_POST['submit'])) {
             z-index: 3;
             top: -14px;
         }
-        .userinp:focus   {
+        .userinp:focus > .userlab   {
             font-size: 12px;
         }
 
@@ -57,6 +57,7 @@ if (isset($_POST['submit'])) {
                     </div>
                     <div class="card-body">
                         <form class="forminp" action="" method="post">
+                            
                             <label for="username" class="pb-1 userlab">Username</label>
                             <input type="text" autocomplete="no" id="username" class="form-control mb-3 userinp" name="username" placeholder="Masukan Username Anda">
                             <label for="pw" class="pb-1">Password</label>
