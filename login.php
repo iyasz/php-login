@@ -4,9 +4,12 @@ $conn = mysqli_connect('localhost', 'root', '', 'db_logintest');
 
 if (isset($_POST['submit'])) {
     $username = htmlspecialchars($_POST['username']);
-    $password = htmlspecialchars($_POST['pw']);
+    $password = htmlspecialchars($_POST['password']);
     if ($username == "" or $password == "") {
         $alert = "Masukan Email Dan Password";
+    }
+    else {
+        $data = mysqli_query($conn, "select * from tbl_admin where username = 'username' And password = '$password' ");
     }
 }
 
@@ -48,7 +51,7 @@ if (isset($_POST['submit'])) {
             border-color: #007AFF;
         }
         .title h3{
-            margin-bottom: 35px;
+            margin-bottom: 39px;
             font-weight: lighter;
             letter-spacing: 0.8px;
             text-align: center;
@@ -88,7 +91,10 @@ if (isset($_POST['submit'])) {
             <div class="col-md-5">
                 <div class="card shadow-lg">
                     <div class="card-body">
-                        <div class="title">
+                        <div class="title align-self-center">
+                            <p class="text-center">
+                                <img class="mb-4 mt-3 " width="80px" src="avatar.svg" alt="avatar">
+                            </p>
                             <h3>Sign In To YaszCrud</h3>
                         </div>
                         <form class="forminp" action="" method="post">
@@ -97,12 +103,12 @@ if (isset($_POST['submit'])) {
                             <input type="text" autocomplete="no" id="username" class="form-control mb-3 userinp" name="username" placeholder="Masukan Username Anda">
                             <label for="pw" class="pb-1 paslab">Password</label>
                             <i class="bi bi-lock pasic"></i>
-                            <input type="password" class="form-control pasinp" id="pw" name="pw" placeholder="Masukan Password Anda">
+                            <input type="password" class="form-control pasinp" id="pw" name="password" placeholder="Masukan Password Anda">
                             <p class="alert"><?php if (isset($alert)) {
                                                     echo "$alert";
                                                 } ?></p>
                             <div class="form-group text-center">
-                                <button class="btn btn-primary btn-msk" type="masuk" name="submit">Masuk</button>
+                                <button class="btn btn-primary btn-msk" type="submit" name="submit">Masuk</button>
                             </div>
                             <div class="mt-4 text-center tb">
                                 <p>Don't have an account? <a class=" text-decoration-none" href="#">Signup Now</a></p>
