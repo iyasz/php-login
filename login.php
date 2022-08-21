@@ -54,17 +54,26 @@ if (isset($_POST['submit'])) {
         }
 
         .btn-msk {
-            background: #293462;
+            background: #007AFF;
             border: none;
             outline: none;
             box-shadow: none;
             color: whitesmoke;
-            padding: 6px 19vh;
+            padding: 6px 85px;
             border-radius: 25px;
+            font-family: sans-serif;
+            letter-spacing: 0.5px;
         }
 
         .btn-msk:hover {
-            background: #293470;
+            background: #007AF4;
+        }
+
+        .tb p {
+            font-size: 12px;
+        }
+        .tb a {
+            color: #007AFF;
         }
     </style>
 
@@ -88,6 +97,9 @@ if (isset($_POST['submit'])) {
                                                 } ?></p>
                             <div class="form-group text-center">
                                 <button class="btn btn-primary btn-msk" type="masuk" name="submit">Masuk</button>
+                            </div>
+                            <div class="mt-4 text-center tb">
+                                <p>Don't have an account? <a class=" text-decoration-none" href="#">Signup Now</a></p>
                             </div>
                         </form>
                     </div>
