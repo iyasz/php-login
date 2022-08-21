@@ -44,8 +44,14 @@ if (isset($_POST['submit'])) {
             box-shadow: none;
         }
 
-        .forminp:focus .userinp {
-            border: none;
+        .userinp:focus, .pasinp:focus {
+            border-color: #007AFF;
+        }
+        .title h3{
+            margin-bottom: 35px;
+            font-weight: lighter;
+            letter-spacing: 0.8px;
+            text-align: center;
         }
 
         .useric, .pasic {
@@ -81,10 +87,10 @@ if (isset($_POST['submit'])) {
         <div class="row justify-content-center">
             <div class="col-md-5">
                 <div class="card shadow-lg">
-                    <div class="card-header text-bg-dark ps-3">
-                        <h1>Login</h1>
-                    </div>
                     <div class="card-body">
+                        <div class="title">
+                            <h3>Sign In To YaszCrud</h3>
+                        </div>
                         <form class="forminp" action="" method="post">
                             <label for="username" class="pb-1 userlab">Username</label>
                             <i class="bi bi-person-fill useric"></i>
