@@ -9,11 +9,16 @@ if (isset($_POST['submit'])) {
         $alert = "Masukan Email Dan Password";
     }
     else {
-        $data = mysqli_query($conn, "select * from tbl_admin where username = '$username' AND password = '$password' ");
-        if(mysqli_num_rows($data) <= 0){
-            $alert = "Username Atau Password anda salah";
+        $userCheck = mysqli_query($conn, "select * from tbl_admin where username = '$username' ");
+        $passCheck = mysqli_query($conn, "select * from tbl_admin where password = '$password' ");
+        if(mysqli_num_rows($userCheck) <= 0){
+            $alert = "Username anda belum terdaftar";
         }else {
-            $alert = "silahkan masuk";
+            if(mysqli_num_rows($passCheck) <= 0){
+                $alert = "Password anda salah";
+            } else {
+                $alert = "Silahkan masuk";
+            }
         }
     }
 }
