@@ -13,7 +13,7 @@ if (isset($_POST['submit'])) {
         if(mysqli_num_rows($data) <= 0) {
             $alert = "Username Atau Password Anda salah";
         } else {
-            
+            $alert = "silahkan masuk";
         }
     }
 }
