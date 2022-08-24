@@ -17,7 +17,7 @@ if (isset($_POST['submit'])) {
             if(mysqli_num_rows($passCheck) <= 0){
                 $alert = "Password anda salah";
             } else {
-                $alert = "Silahkan masuk";
+                header('Location: index.php');
             }
         }
     }
@@ -44,9 +44,8 @@ if (isset($_POST['submit'])) {
             color: red;
             font-size: 13px;
             letter-spacing: 0.4px;
-            position: relative;
-            z-index: 3;
             top: -14px;
+            height: 19px;
         }
 
         .forminp .pasinp,
@@ -103,7 +102,7 @@ if (isset($_POST['submit'])) {
                     <div class="card-body">
                         <div class="title align-self-center">
                             <p class="text-center">
-                                <img class="mb-4 mt-3 " width="80px" src="avatar.svg" alt="avatar">
+                                <img class="mb-4 mt-3 " width="80px" src="asset/avatar.svg" alt="avatar">
                             </p>
                             <h3>Sign In To YaszCrud</h3>
                         </div>
