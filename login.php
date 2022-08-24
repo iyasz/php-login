@@ -120,7 +120,7 @@ if (isset($_POST['submit'])) {
                                 <button class="btn btn-primary btn-msk" type="submit" name="submit">Masuk</button>
                             </div>
                             <div class="mt-4 text-center tb">
-                                <p>Don't have an account? <a class=" text-decoration-none" href="#">Signup Now</a></p>
+                                <p>Don't have an account? <a class=" text-decoration-none" href="register.php">Signup Now</a></p>
                             </div>
                         </form>
                     </div>

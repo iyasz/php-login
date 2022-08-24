@@ -32,7 +32,7 @@ if(isset($_POST['btn-register'])){
     <style>
         .header h1 {
             font-size: 25px;
-            font-weight: lighter;
+            font-weight: bold;
             font-family: sans-serif;
         }
         .form-regis .alrt p {
@@ -64,9 +64,8 @@ if(isset($_POST['btn-register'])){
             <div class="col-md-5">
                 <div class="card shadow-lg pb-4">
                     <div class="card-body">
-                        <div class="header text-center">
-                            <p class="my-2"> <img src="asset/avatar.svg" width="90px" alt=""></p>
-                            <h1 class="mt-4">Register </h1>
+                        <div class="header text-center mt-3">
+                            <h1>Sign Up</h1>
                         </div>
                         <form action="" method="post">
                             <div class="form-regis">
@@ -75,6 +74,8 @@ if(isset($_POST['btn-register'])){
                                 <label for="">Username <i class="bi bi-person-plus"></i></label>
                                 <input type="text" name="username" placeholder="Masukan Username Anda" autocomplete="off" class="form-control">
                                 <label for="">Password <i class="bi bi-key"></i></label>
+                                <input type="text" name="username" placeholder="Masukan Username Anda" autocomplete="off" class="form-control">
+                                <label for="">Fix Password <i class="bi bi-lock"></i></label>
                                 <input type="password" name="password" placeholder="Masukan Password Anda" class="form-control">
                                 <div class="alrt">
                                     <p><?php if (isset($alert)) {
@@ -82,7 +83,8 @@ if(isset($_POST['btn-register'])){
                                         } ?></p>
                                 </div>
                                 <div class="but text-center">
-                                    <button class="btn btn-primary mt-2 reg" type="submit" name="btn-register">Register</button>
+                                    <button class="btn btn-primary reg" type="submit" name="btn-register">Register</button>
+                                    <p></p>
                                 </div>
                             </div>
                         </form>
