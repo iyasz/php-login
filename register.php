@@ -2,18 +2,7 @@
 
 $conn = mysqli_connect('localhost', 'root', '', 'db_logintest');
 
-if (isset($_POST['btn-register'])) {
-    $nama = htmlspecialchars($_POST['nama']);
-    $username = htmlspecialchars($_POST['username']);
-    $password = htmlspecialchars($_POST['password']);
 
-    if ($nama == "" or $username == "" or $password == "") {
-        $alert = "Masukan Data Dengan Lengkap";
-    } else {
-        mysqli_query($conn, "INSERT into tbl_admin (`nama`, `username`, `password`) VALUES ('$nama', '$username', '$password') ");
-        header('location: login.php');
-    }
-}
 
 ?>
 
