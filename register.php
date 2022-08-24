@@ -2,16 +2,21 @@
 
 $conn = mysqli_connect('localhost', 'root', '', 'db_logintest');
 
-if(isset($_POST['btn-register'])){
+if (isset($_POST['btn-register'])) {
     $nama = htmlspecialchars($_POST['nama']);
     $username = htmlspecialchars($_POST['username']);
     $password = htmlspecialchars($_POST['password']);
+    $fixpassword = htmlspecialchars($_POST['fixpassword']);
 
-    if($nama == "" or $username == "" or $password == ""){
+    if ($nama == "" or $username == "" or $password == "" or $fixpassword = "") {
         $alert = "Masukan Data Dengan Lengkap!";
     } else {
-        mysqli_query($conn, "INSERT INTO tbl_admin(`nama`,`username`,`password`) VALUES ('$nama','$username','$password')");
-        header('location: login.php');
+        if ($password == $fixpassword) {
+            mysqli_query($conn, "INSERT INTO tbl_admin(`nama`,`username`,`password`) VALUES ('$nama','$username','$password')");
+            header('location: login.php');
+        } else {
+            $alert = "Fix Password Anda Salah";
+        }
     }
 }
 
@@ -35,6 +40,7 @@ if(isset($_POST['btn-register'])){
             font-weight: bold;
             font-family: sans-serif;
         }
+
         .form-regis .alrt p {
             height: 30px;
             font-size: 14px;
@@ -54,29 +60,42 @@ if(isset($_POST['btn-register'])){
             font-family: sans-serif;
             letter-spacing: 0.5px;
         }
+
+        .already {
+            font-size: 12px;
+            margin-top: 20px;
+        }
+
         .form-regis input {
             margin-bottom: 15px;
+        }
+        .form-regis input:focus {
+            box-shadow: none;
+            outline: none;
         }
     </style>
 
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-5">
-                <div class="card shadow-lg pb-4">
+                <div class="card shadow-lg">
                     <div class="card-body">
                         <div class="header text-center mt-3">
                             <h1>Sign Up</h1>
                         </div>
                         <form action="" method="post">
                             <div class="form-regis">
-                                <label for="">Nama <i class="bi bi-person"></i></label>
-                                <input type="text" name="nama" autocomplete="off" placeholder="Masukan Nama Anda" class="form-control" >
-                                <label for="">Username <i class="bi bi-person-plus"></i></label>
-                                <input type="text" name="username" placeholder="Masukan Username Anda" autocomplete="off" class="form-control">
-                                <label for="">Password <i class="bi bi-key"></i></label>
-                                <input type="text" name="username" placeholder="Masukan Username Anda" autocomplete="off" class="form-control">
-                                <label for="">Fix Password <i class="bi bi-lock"></i></label>
-                                <input type="password" name="password" placeholder="Masukan Password Anda" class="form-control">
+                                <label for="nama">Nama <i class="bi bi-person"></i></label>
+                                <input type="text" id="nama" name="nama" autocomplete="off" placeholder="Masukan Nama Anda" class="form-control">
+
+                                <label for="user">Username <i class="bi bi-person-plus"></i></label>
+                                <input type="text" id="user" name="username" placeholder="Masukan Username Anda" class="form-control">
+
+                                <label for="pw">Password <i class="bi bi-key"></i></label>
+                                <input type="password" id="pw" name="password" placeholder="Masukan Username Anda" class="form-control">
+
+                                <label for="fixpw">Fix Password <i class="bi bi-lock"></i></label>
+                                <input type="password" id="fixpw" name="fixpassword" placeholder="Masukan Password Anda" class="form-control">
                                 <div class="alrt">
                                     <p><?php if (isset($alert)) {
                                             echo $alert;
@@ -84,7 +103,7 @@ if(isset($_POST['btn-register'])){
                                 </div>
                                 <div class="but text-center">
                                     <button class="btn btn-primary reg" type="submit" name="btn-register">Register</button>
-                                    <p></p>
+                                    <p class="already">Already have an Account? <a class="text-decoration-none" href="login.php">Login</a></p>
                                 </div>
                             </div>
                         </form>
