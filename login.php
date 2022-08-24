@@ -109,7 +109,7 @@ if (isset($_POST['submit'])) {
                         <form class="forminp" action="" method="post">
                             <label for="username" class="pb-1 userlab">Username</label>
                             <i class="bi bi-person-fill useric"></i>
-                            <input type="text" autocomplete="no" id="username" class="form-control mb-3 userinp" name="username" placeholder="Masukan Username Anda">
+                            <input type="text" autocomplete="off" id="username" class="form-control mb-3 userinp" name="username" placeholder="Masukan Username Anda">
                             <label for="pw" class="pb-1 paslab">Password</label>
                             <i class="bi bi-lock pasic"></i>
                             <input type="password" class="form-control pasinp" id="pw" name="password" placeholder="Masukan Password Anda">
