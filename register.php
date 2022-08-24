@@ -2,7 +2,18 @@
 
 $conn = mysqli_connect('localhost', 'root', '', 'db_logintest');
 
+if(isset($_POST['btn-register'])){
+    $nama = htmlspecialchars($_POST['nama']);
+    $username = htmlspecialchars($_POST['username']);
+    $password = htmlspecialchars($_POST['password']);
 
+    if($nama == "" or $username == "" or $password == ""){
+        $alert = "Masukan Data Dengan Lengkap!";
+    } else {
+        mysqli_query($conn, "INSERT INTO tbl_admin(`nama`,`username`,`password`) VALUES ('$nama','$username','$password')");
+        header('location: login.php');
+    }
+}
 
 ?>
 
@@ -60,9 +71,9 @@ $conn = mysqli_connect('localhost', 'root', '', 'db_logintest');
                         <form action="" method="post">
                             <div class="form-regis">
                                 <label for="">Nama <i class="bi bi-person"></i></label>
-                                <input type="text" name="nama" placeholder="Masukan Nama Anda" class="form-control" >
+                                <input type="text" name="nama" autocomplete="off" placeholder="Masukan Nama Anda" class="form-control" >
                                 <label for="">Username <i class="bi bi-person-plus"></i></label>
-                                <input type="text" name="username" placeholder="Masukan Username Anda" class="form-control">
+                                <input type="text" name="username" placeholder="Masukan Username Anda" autocomplete="off" class="form-control">
                                 <label for="">Password <i class="bi bi-key"></i></label>
                                 <input type="password" name="password" placeholder="Masukan Password Anda" class="form-control">
                                 <div class="alrt">
