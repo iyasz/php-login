@@ -107,18 +107,24 @@ if (isset($_POST['submit'])) {
                             <h3>Sign In To YaszCrud</h3>
                         </div>
                         <form class="forminp" action="" method="post">
+
                             <label for="username" class="pb-1 userlab">Username</label>
                             <i class="bi bi-person-fill useric"></i>
                             <input type="text" autocomplete="off" id="username" class="form-control mb-3 userinp" name="username" placeholder="Masukan Username Anda">
+
                             <label for="pw" class="pb-1 paslab">Password</label>
                             <i class="bi bi-lock pasic"></i>
-                            <input type="password" class="form-control pasinp" id="pw" name="password" placeholder="Masukan Password Anda">
+                            <input type="password" class="form-control pasinp" id="pw" name="password" 
+                            placeholder="Masukan Password Anda">
+                            
                             <p class="alert"><?php if (isset($alert)) {
                                                     echo "$alert";
                                                 } ?></p>
+
                             <div class="form-group text-center">
                                 <button class="btn btn-primary btn-msk" type="submit" name="submit">Masuk</button>
                             </div>
+
                             <div class="mt-4 text-center tb">
                                 <p>Don't have an account? <a class=" text-decoration-none" href="../register/">Signup Now</a></p>
                             </div>
