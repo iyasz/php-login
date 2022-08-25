@@ -39,6 +39,7 @@ if (isset($_POST['submit'])) {
 
 <body>
     <style>
+
         .alert {
             color: red;
             font-size: 13px;
@@ -96,9 +97,13 @@ if (isset($_POST['submit'])) {
         .tb a {
             color: #007AFF;
         }
+
+        .hF a {
+            font-size: 13px;
+        }
     </style>
 
-    <div class="container mt-5">
+    <div class="container mt-4">
         <div class="row justify-content-center">
             <div class="col-md-5">
                 <div class="card shadow-lg">
@@ -119,11 +124,11 @@ if (isset($_POST['submit'])) {
                             <i class="bi bi-lock pasic"></i>
                             <input type="password" class="form-control pasinp" id="pw" name="password" placeholder="Masukan Password Anda">
 
-                            <div class="pb-4 hF">
+                            <div class="pb-4 d-flex hF">
                                 <p class="alert"><?php if (isset($alert)) {
                                                         echo "$alert";
                                                     } ?></p>
-                                <a href="">Forgot Password?</a>
+                                <a class="text-decoration-none pt-1" href="../forgot/email.php">Forgot Password?</a>
                             </div>
 
                             <div class="form-group text-center">
@@ -131,7 +136,7 @@ if (isset($_POST['submit'])) {
                             </div>
 
                             <div class="mt-4 text-center tb">
-                                <p>Don't have an account? <a class=" text-decoration-none" href="../register/">Signup Now</a></p>
+                                <p>Don't have an account? <a class=" text-decoration-none " href="../register/">Signup Now</a></p>
                             </div>
                         </form>
                     </div>
