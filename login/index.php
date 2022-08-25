@@ -7,14 +7,13 @@ if (isset($_POST['submit'])) {
     $password = htmlspecialchars($_POST['password']);
     if ($username == "" or $password == "") {
         $alert = "Masukan Email Dan Password";
-    }
-    else {
+    } else {
         $userCheck = mysqli_query($conn, "SELECT * from tbl_admin where username = '$username' ");
         $passCheck = mysqli_query($conn, "SELECT * from tbl_admin where password = '$password' ");
-        if(mysqli_num_rows($userCheck) <= 0){
+        if (mysqli_num_rows($userCheck) <= 0) {
             $alert = "Username anda belum terdaftar";
-        }else {
-            if(mysqli_num_rows($passCheck) <= 0){
+        } else {
+            if (mysqli_num_rows($passCheck) <= 0) {
                 $alert = "Password anda salah";
             } else {
                 header('Location: ../index.php');
@@ -56,17 +55,20 @@ if (isset($_POST['submit'])) {
             box-shadow: none;
         }
 
-        .userinp:focus, .pasinp:focus {
+        .userinp:focus,
+        .pasinp:focus {
             border-color: #007AFF;
         }
-        .title h3{
+
+        .title h3 {
             margin-bottom: 39px;
             font-weight: lighter;
             letter-spacing: 0.8px;
             text-align: center;
         }
 
-        .useric, .pasic {
+        .useric,
+        .pasic {
             font-size: 15px;
             opacity: 60%;
         }
@@ -84,12 +86,13 @@ if (isset($_POST['submit'])) {
         }
 
         .btn-msk:hover {
-            background: #007AF4;
+            background: #007AF9;
         }
 
         .tb p {
             font-size: 12px;
         }
+
         .tb a {
             color: #007AFF;
         }
@@ -114,12 +117,14 @@ if (isset($_POST['submit'])) {
 
                             <label for="pw" class="pb-1 paslab">Password</label>
                             <i class="bi bi-lock pasic"></i>
-                            <input type="password" class="form-control pasinp" id="pw" name="password" 
-                            placeholder="Masukan Password Anda">
-                            
-                            <p class="alert"><?php if (isset($alert)) {
-                                                    echo "$alert";
-                                                } ?></p>
+                            <input type="password" class="form-control pasinp" id="pw" name="password" placeholder="Masukan Password Anda">
+
+                            <div class="pb-4 hF">
+                                <p class="alert"><?php if (isset($alert)) {
+                                                        echo "$alert";
+                                                    } ?></p>
+                                <a href="">Forgot Password?</a>
+                            </div>
 
                             <div class="form-group text-center">
                                 <button class="btn btn-primary btn-msk" type="submit" name="submit">Masuk</button>
