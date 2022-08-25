@@ -17,7 +17,7 @@ if (isset($_POST['submit'])) {
             if(mysqli_num_rows($passCheck) <= 0){
                 $alert = "Password anda salah";
             } else {
-                header('Location: index.php');
+                header('Location: ../index.php');
             }
         }
     }
@@ -102,7 +102,7 @@ if (isset($_POST['submit'])) {
                     <div class="card-body">
                         <div class="title align-self-center">
                             <p class="text-center">
-                                <img class="mb-4 mt-3 " width="80px" src="asset/avatar.svg" alt="avatar">
+                                <img class="mb-4 mt-3 " width="80px" src="../asset/avatar.svg" alt="avatar">
                             </p>
                             <h3>Sign In To YaszCrud</h3>
                         </div>
@@ -120,7 +120,7 @@ if (isset($_POST['submit'])) {
                                 <button class="btn btn-primary btn-msk" type="submit" name="submit">Masuk</button>
                             </div>
                             <div class="mt-4 text-center tb">
-                                <p>Don't have an account? <a class=" text-decoration-none" href="register.php">Signup Now</a></p>
+                                <p>Don't have an account? <a class=" text-decoration-none" href="../register/">Signup Now</a></p>
                             </div>
                         </form>
                     </div>

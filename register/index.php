@@ -11,12 +11,8 @@ if (isset($_POST['btn-register'])) {
     if ($nama == "" or $username == "" or $password == "" or $fixpassword = "") {
         $alert = "Masukan Data Dengan Lengkap!";
     } else {
-        if ($password == $fixpassword) {
-            mysqli_query($conn, "INSERT INTO tbl_admin(`nama`,`username`,`password`) VALUES ('$nama','$username','$password')");
-            header('location: login.php');
-        } else {
-            $alert = "Fix Password Anda Salah";
-        }
+        mysqli_query($conn, "INSERT INTO tbl_admin(`nama`,`username`,`password`) VALUES ('$nama','$username','$password')");
+        header('location: ../login/index.php');
     }
 }
 
@@ -89,7 +85,7 @@ if (isset($_POST['btn-register'])) {
                                 <input type="text" id="nama" name="nama" autocomplete="off" placeholder="Masukan Nama Anda" class="form-control">
 
                                 <label for="user">Username <i class="bi bi-person-plus"></i></label>
-                                <input type="text" id="user" name="username" placeholder="Masukan Username Anda" class="form-control">
+                                <input type="text" id="user" name="username" autocomplete="off" placeholder="Masukan Username Anda" class="form-control">
 
                                 <label for="pw">Password <i class="bi bi-key"></i></label>
                                 <input type="password" id="pw" name="password" placeholder="Masukan Username Anda" class="form-control">
@@ -103,7 +99,7 @@ if (isset($_POST['btn-register'])) {
                                 </div>
                                 <div class="but text-center">
                                     <button class="btn btn-primary reg" type="submit" name="btn-register">Register</button>
-                                    <p class="already">Already have an Account? <a class="text-decoration-none" href="login.php">Login</a></p>
+                                    <p class="already">Already have an Account? <a class="text-decoration-none" href="../login/">Login</a></p>
                                 </div>
                             </div>
                         </form>
