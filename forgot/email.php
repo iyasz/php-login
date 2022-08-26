@@ -1,5 +1,7 @@
 <?php
 
+$conn = mysqli_connect('localhost', 'root', '', 'db_logintest');
+
 ?>
 
 <!doctype html>
@@ -13,7 +15,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-lg-5">
                 <div class="card shadow-lg">
@@ -23,7 +25,7 @@
                             <h4>Enter your email address</h4>
                             <input type="text" placeholder="Enter email address" name="inpEmail" class="form-control">
                             <p></p>
-                            <button class="btn btn-primary">Continue</button>
+                            <button name="btn-con" class="btn btn-primary">Continue</button>
                         </form>
                     </div>
                 </div>
