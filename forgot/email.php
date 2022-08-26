@@ -10,6 +10,8 @@ if(isset($_POST['btn-con'])){
         $emailCheck = mysqli_query($conn, "SELECT * FROM tbl_user where username = '$email'");
         if(mysqli_num_rows($emailCheck) <= 0){
             $alert = "Email anda belum terdaftar";
+        } else {
+            
         }
     }
 }
