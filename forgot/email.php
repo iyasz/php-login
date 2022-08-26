@@ -2,6 +2,15 @@
 
 $conn = mysqli_connect('localhost', 'root', '', 'db_logintest');
 
+if(isset($_POST['btn-con'])){
+    $email = htmlspecialchars($_POST['inpEmail']);
+    if($email == ""){
+        $alert = "Masukan Email Anda";
+    } else{
+        $emailCheck = mysqli_query($conn, "SELECT * FROM tbl_user where username = '$email'");
+    }
+}
+
 ?>
 
 <!doctype html>
