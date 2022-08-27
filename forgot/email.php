@@ -55,8 +55,12 @@ if(isset($_POST['btn-con'])){
             font-size: 14px;
             margin-top: 14px;
         }
+        .parent {
+            position: relative;
+            top: 20vh;
+        }
     </style>
-    <div class="container mt-5 ">
+    <div class="container parent">
         <div class="row justify-content-center ">
             <div class="col-lg-5">
                 <div class="card shadow-lg">
