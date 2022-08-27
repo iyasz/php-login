@@ -5,11 +5,11 @@ $conn = mysqli_connect('localhost', 'root', '', 'db_logintest');
 if(isset($_POST['btn-con'])){
     $email = htmlspecialchars($_POST['inpEmail']);
     if($email == ""){
-        $alert = "Masukkan Email Anda";
+        $alert = "Masukkan Username Anda";
     } else{
         $emailCheck = mysqli_query($conn, "SELECT * FROM tbl_user where username = '$email'");
         if(mysqli_num_rows($emailCheck) <= 0){
-            $alert = "Email anda belum terdaftar";
+            $alert = "Username anda belum terdaftar";
         } else {
             
         }
@@ -29,13 +29,17 @@ if(isset($_POST['btn-con'])){
 </head>
 <body>
     <style>
+        form .inp:focus {
+            box-shadow: none;
+            outline: none;
+        }
         form > p {
             height: 20px;
             color: #FF1E00;
-            font-size: 14px;
+            font-size: 13px;
         }
         .header h5 {
-            font-size: 15px;
+            font-size: 13px;
             margin-bottom: 20px;
         }
         .footer .btn-con {
@@ -60,9 +64,9 @@ if(isset($_POST['btn-con'])){
                         <form action="" method="post">
                             <div class="header text-center">
                                 <h2>Forgot Password?</h2>
-                                <h5>Enter your email address</h5>
+                                <h5>Enter your username address</h5>
                             </div>
-                            <input type="text" placeholder="Enter email address" name="inpEmail" class="form-control">
+                            <input type="text" placeholder="Enter username address" name="inpEmail" class="form-control inp">
                             <p><?php if(isset($alert)){
                                 echo $alert;
                             } ?></p>

@@ -88,10 +88,10 @@ if (isset($_POST['btn-register'])) {
                                 <input type="text" id="user" name="username" autocomplete="off" placeholder="Masukan Username Anda" class="form-control">
 
                                 <label for="pw">Password <i class="bi bi-key"></i></label>
-                                <input type="password" id="pw" name="password" placeholder="Masukan Username Anda" class="form-control">
+                                <input type="password" id="pw" name="password" placeholder="Masukan Password Anda" class="form-control">
 
                                 <label for="fixpw">Fix Password <i class="bi bi-lock"></i></label>
-                                <input type="password" id="fixpw" name="fixpassword" placeholder="Masukan Password Anda" class="form-control">
+                                <input type="password" id="fixpw" name="fixpassword" placeholder="Masukan Password Anda Lagi" class="form-control">
                                 <div class="alrt">
                                     <p><?php if (isset($alert)) {
                                             echo $alert;
