@@ -9,6 +9,7 @@ if(isset($_POST['ch'])){
         $alert = "Masukkan Password baru";
     } else{
         mysqli_query($conn, "UPDATE tbl_user WHERE password = '$userCheck'");
+        header('location: ../login.index.php');
     }
 }
 
