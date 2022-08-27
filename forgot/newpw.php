@@ -2,19 +2,7 @@
 
 $conn = mysqli_connect('localhost', 'root', '', 'db_logintest');
 
-if(isset($_POST['btn-con'])){
-    $email = htmlspecialchars($_POST['inpEmail']);
-    if($email == ""){
-        $alert = "Masukkan Username Anda";
-    } else{
-        $emailCheck = mysqli_query($conn, "SELECT * FROM tbl_user where username = '$email'");
-        if(mysqli_num_rows($emailCheck) <= 0){
-            $alert = "Username anda belum terdaftar";
-        } else {
-            header('location: newpw.php');
-        }
-    }
-}
+
 
 ?>
 
@@ -67,10 +55,10 @@ if(isset($_POST['btn-con'])){
                     <div class="card-body ">
                         <form action="" method="post">
                             <div class="header text-center">
-                                <h2>Forgot Password?</h2>
-                                <h5>Enter your username address</h5>
+                                <h2>New Password</h2>
+                                <h5>Enter your new password</h5>
                             </div>
-                            <input type="password" placeholder="Enter username address" autocomplete="off" name="inpEmail" class="form-control inp">
+                            <input type="password" placeholder="Enter username address" autocomplete="off" name="inpEmail" class="form-control inp mb-3">
                             <input type="password" placeholder="Enter username address" autocomplete="off" name="inpEmail" class="form-control inp">
                             <p><?php if(isset($alert)){
                                 echo $alert;
