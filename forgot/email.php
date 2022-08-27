@@ -27,19 +27,45 @@ if(isset($_POST['btn-con'])){
     <title>Masukkan Email</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
-
 <body>
-    <div class="container mt-5">
-        <div class="row justify-content-center">
+    <style>
+        form > p {
+            height: 20px;
+            color: #FF1E00;
+            font-size: 14px;
+        }
+        .header h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .footer .btn-con {
+            box-shadow: none;
+            outline: none;
+            border-radius: 2px;
+            padding: 5px 94px;
+        }
+        .footer .btn-con:active{
+            box-shadow: none;
+        }
+    </style>
+    <div class="container mt-5 ">
+        <div class="row justify-content-center ">
             <div class="col-lg-5">
                 <div class="card shadow-lg">
-                    <div class="card-body text-center">
+                    <div class="card-body ">
                         <form action="" method="post">
-                            <h2>Forgot Password?</h2>
-                            <h4>Enter your email address</h4>
+                            <div class="header text-center">
+                                <h2>Forgot Password?</h2>
+                                <h4>Enter your email address</h4>
+                            </div>
                             <input type="text" placeholder="Enter email address" name="inpEmail" class="form-control">
-                            <p></p>
-                            <button name="btn-con" class="btn btn-primary">Continue</button>
+                            <p><?php if(isset($alert)){
+                                echo $alert;
+                            } ?></p>
+                            <div class="footer text-center">
+                                <button name="btn-con" class="btn btn-primary btn-con">Continue</button>
+                                <p>Remember? <a class="text-decoration-none " href="../login/">Go Back</a></p>
+                            </div>
                         </form>
                     </div>
                 </div>
