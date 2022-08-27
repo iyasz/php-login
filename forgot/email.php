@@ -66,7 +66,7 @@ if(isset($_POST['btn-con'])){
                                 <h2>Forgot Password?</h2>
                                 <h5>Enter your username address</h5>
                             </div>
-                            <input type="text" placeholder="Enter username address" name="inpEmail" class="form-control inp">
+                            <input type="text" placeholder="Enter username address" autocomplete="off" name="inpEmail" class="form-control inp">
                             <p><?php if(isset($alert)){
                                 echo $alert;
                             } ?></p>
