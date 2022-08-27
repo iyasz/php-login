@@ -11,8 +11,14 @@ if (isset($_POST['btn-register'])) {
     if ($nama == "" or $username == "" or $password == "" or $fixpassword = "") {
         $alert = "Masukan Data Dengan Lengkap!";
     } else {
-        mysqli_query($conn, "INSERT INTO tbl_user(`nama`,`username`,`password`) VALUES ('$nama','$username','$password')");
-        header('location: ../login/index.php');
+        if ($password != $fixpassword) {
+            $alert = "Confirm Password anda salah";
+        }
+        if(!$alert){
+            if(mysqli_query($conn, "INSERT INTO tbl_user(`nama`,`username`,`password`) VALUES ('$nama','$username','$password')"));
+        }else{
+            $alert = "insert failed";
+        }
     }
 }
 
@@ -65,6 +71,7 @@ if (isset($_POST['btn-register'])) {
         .form-regis input {
             margin-bottom: 15px;
         }
+
         .form-regis input:focus {
             box-shadow: none;
             outline: none;
@@ -90,7 +97,7 @@ if (isset($_POST['btn-register'])) {
                                 <label for="pw">Password <i class="bi bi-key"></i></label>
                                 <input type="password" id="pw" name="password" placeholder="Masukan Password Anda" class="form-control">
 
-                                <label for="fixpw">Fix Password <i class="bi bi-lock"></i></label>
+                                <label for="fixpw">Confirm Password <i class="bi bi-lock"></i></label>
                                 <input type="password" id="fixpw" name="fixpassword" placeholder="Masukan Password Anda Lagi" class="form-control">
                                 <div class="alrt">
                                     <p><?php if (isset($alert)) {
