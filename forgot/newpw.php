@@ -2,6 +2,15 @@
 
 $conn = mysqli_connect('localhost', 'root', '', 'db_logintest');
 
+if(isset($_POST['ch'])){
+    $userCheck = htmlspecialchars($_POST['inpUser']);
+    $userChecka = htmlspecialchars($_POST['inpUsera']);
+    if($userCheck == "" or $userChecka == ""){
+        $alert = "Masukkan Password baru";
+    } else{
+        mysqli_query($conn, "UPDATE tbl_user WHERE password = '$userCheck'");
+    }
+}
 
 
 ?>
@@ -58,13 +67,13 @@ $conn = mysqli_connect('localhost', 'root', '', 'db_logintest');
                                 <h2>New Password</h2>
                                 <h5>Enter your new password</h5>
                             </div>
-                            <input type="password" placeholder="Enter new password" autocomplete="off" name="inpEmail" class="form-control inp mb-3">
-                            <input type="password" placeholder="Enter new password again" autocomplete="off" name="inpEmail" class="form-control inp">
+                            <input type="password" placeholder="Enter new password" autocomplete="off" name="inpUser" class="form-control inp mb-3">
+                            <input type="password" placeholder="Enter new password again" autocomplete="off" name="inpUsera" class="form-control inp">
                             <p><?php if(isset($alert)){
                                 echo $alert;
                             } ?></p>
                             <div class="footer text-center">
-                                <button name="btn-con" class="btn btn-primary btn-con">Continue</button>
+                                <button name="btn-ch" class="btn btn-primary btn-con">Confirm</button>
                                 <p>Remember? <a class="text-decoration-none " href="../login/">Go Back</a></p>
                             </div>
                         </form>
