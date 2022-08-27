@@ -11,7 +11,7 @@ if (isset($_POST['btn-register'])) {
     if ($nama == "" or $username == "" or $password == "" or $fixpassword = "") {
         $alert = "Masukan Data Dengan Lengkap!";
     } else {
-        mysqli_query($conn, "INSERT INTO tbl_admin(`nama`,`username`,`password`) VALUES ('$nama','$username','$password')");
+        mysqli_query($conn, "INSERT INTO tbl_user(`nama`,`username`,`password`) VALUES ('$nama','$username','$password')");
         header('location: ../login/index.php');
     }
 }

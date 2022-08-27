@@ -8,8 +8,8 @@ if (isset($_POST['submit'])) {
     if ($username == "" or $password == "") {
         $alert = "Masukan Email Dan Password";
     } else {
-        $userCheck = mysqli_query($conn, "SELECT * from tbl_admin where username = '$username' ");
-        $passCheck = mysqli_query($conn, "SELECT * from tbl_admin where password = '$password' ");
+        $userCheck = mysqli_query($conn, "SELECT * from tbl_user where username = '$username' ");
+        $passCheck = mysqli_query($conn, "SELECT * from tbl_user where password = '$password' ");
         if (mysqli_num_rows($userCheck) <= 0) {
             $alert = "Username anda belum terdaftar";
         } else {

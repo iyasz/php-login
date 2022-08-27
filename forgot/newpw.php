@@ -45,7 +45,7 @@ $conn = mysqli_connect('localhost', 'root', '', 'db_logintest');
         }
         .parent {
             position: relative;
-            top: 20vh;
+            top: 135px;
         }
     </style>
     <div class="container parent">
@@ -58,8 +58,8 @@ $conn = mysqli_connect('localhost', 'root', '', 'db_logintest');
                                 <h2>New Password</h2>
                                 <h5>Enter your new password</h5>
                             </div>
-                            <input type="password" placeholder="Enter username address" autocomplete="off" name="inpEmail" class="form-control inp mb-3">
-                            <input type="password" placeholder="Enter username address" autocomplete="off" name="inpEmail" class="form-control inp">
+                            <input type="password" placeholder="Enter new password" autocomplete="off" name="inpEmail" class="form-control inp mb-3">
+                            <input type="password" placeholder="Enter new password again" autocomplete="off" name="inpEmail" class="form-control inp">
                             <p><?php if(isset($alert)){
                                 echo $alert;
                             } ?></p>
