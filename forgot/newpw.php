@@ -2,14 +2,14 @@
 
 $conn = mysqli_connect('localhost', 'root', '', 'db_logintest');
 
-if(isset($_POST['ch'])){
+if(isset($_POST['btn-ch'])){
     $userCheck = htmlspecialchars($_POST['inpUser']);
     $userChecka = htmlspecialchars($_POST['inpUsera']);
     if($userCheck == "" or $userChecka == ""){
         $alert = "Masukkan Password baru";
     } else{
-        mysqli_query($conn, "UPDATE tbl_user WHERE password = '$userCheck'");
-        header('location: ../login.index.php');
+        mysqli_query($conn, "UPDATE tbl_user SET password = '$userCheck' where username = ''");
+        header('location: ../login/index.php');
     }
 }
 
@@ -69,7 +69,7 @@ if(isset($_POST['ch'])){
                                 <h5>Enter your new password</h5>
                             </div>
                             <input type="password" placeholder="Enter new password" autocomplete="off" name="inpUser" class="form-control inp mb-3">
-                            <input type="password" placeholder="Enter new password again" autocomplete="off" name="inpUsera" class="form-control inp">
+                            <input type="password" placeholder="Confirm new password" autocomplete="off" name="inpUsera" class="form-control inp">
                             <p><?php if(isset($alert)){
                                 echo $alert;
                             } ?></p>
