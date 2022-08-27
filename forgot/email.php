@@ -34,8 +34,8 @@ if(isset($_POST['btn-con'])){
             color: #FF1E00;
             font-size: 14px;
         }
-        .header h4 {
-            font-size: 18px;
+        .header h5 {
+            font-size: 15px;
             margin-bottom: 20px;
         }
         .footer .btn-con {
@@ -47,6 +47,10 @@ if(isset($_POST['btn-con'])){
         .footer .btn-con:active{
             box-shadow: none;
         }
+        .footer p {
+            font-size: 14px;
+            margin-top: 14px;
+        }
     </style>
     <div class="container mt-5 ">
         <div class="row justify-content-center ">
@@ -56,7 +60,7 @@ if(isset($_POST['btn-con'])){
                         <form action="" method="post">
                             <div class="header text-center">
                                 <h2>Forgot Password?</h2>
-                                <h4>Enter your email address</h4>
+                                <h5>Enter your email address</h5>
                             </div>
                             <input type="text" placeholder="Enter email address" name="inpEmail" class="form-control">
                             <p><?php if(isset($alert)){
