@@ -11,7 +11,7 @@ if(isset($_POST['btn-con'])){
         if(mysqli_num_rows($emailCheck) <= 0){
             $alert = "Username anda belum terdaftar";
         } else {
-            
+            header('location: newpw.php');
         }
     }
 }
