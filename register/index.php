@@ -34,7 +34,7 @@ if (isset($_POST['btn-register'])) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
 
-<body>
+<body onload="hide()">
     <style>
         .header h1 {
             font-size: 25px;
@@ -99,7 +99,7 @@ if (isset($_POST['btn-register'])) {
                                 <label for="fixpw">Confirm Password <i class="bi bi-lock"></i></label>
                                 <input type="password" id="fixpw" name="fixpassword" placeholder="Masukan Password Anda Lagi" class="form-control">
                                 <div class="alrt">
-                                    <p><?php if (isset($alert)) {
+                                    <p id="hidee" ><?php if (isset($alert)) {
                                             echo $alert;
                                         } ?></p>
                                 </div>
@@ -114,6 +114,12 @@ if (isset($_POST['btn-register'])) {
             </div>
         </div>
     </div>
+    <script>
+        function hide(){
+            const para = element = document.getElementById("hidee");
+            para.style.visibility = "hidden";
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 
