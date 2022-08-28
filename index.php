@@ -91,6 +91,16 @@
                   <th>Kontak</th>
                 </tr>
               </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Pt Jampud</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
             </table>
           </div>
         </div>
