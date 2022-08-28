@@ -56,57 +56,7 @@
     </div>
   </nav>
 
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div class="card">
-          <div class="card-header">
-
-          </div>
-          <div class="card-body">
-            <form action="" method="post">
-              <div class="row">
-                <div class="col-lg-4">
-                  <label for="">Anjime</label>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row justify-content-center mt-5">
-      <div class="col-lg-8">
-        <div class="card">
-          <div class="card-body">
-            <table class="table table-hover">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Nama Perusahaan</th>
-                  <th>Alamat</th>
-                  <th>Kontak</th>
-                  <th>No Telp</th>
-                  <th>Kontak</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Pt Jampud</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
