@@ -8,7 +8,7 @@ if(isset($_POST['btn-ch'])){
     if($userCheck == "" or $userChecka == ""){
         $alert = "Masukkan Password baru";
     } else{
-        mysqli_query($conn, "UPDATE tbl_user SET password = '$userCheck' where username = ''");
+        mysqli_query($conn, "UPDATE tbl_user SET password = '$userCheck'");
         header('location: ../login/index.php');
     }
 }

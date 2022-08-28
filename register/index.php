@@ -11,13 +11,12 @@ if (isset($_POST['btn-register'])) {
     if ($nama == "" or $username == "" or $password == "" or $fixpassword = "") {
         $alert = "Masukan Data Dengan Lengkap!";
     } else {
-        if ($password != $fixpassword) {
-            $alert = "Confirm Password anda salah";
-        }
-        if(!$alert){
-            if(mysqli_query($conn, "INSERT INTO tbl_user(`nama`,`username`,`password`) VALUES ('$nama','$username','$password')"));
-        }else{
-            $alert = "insert failed";
+        $data = mysqli_query($conn, "SELECT * FROM tbl_user where username ='$username'");
+        if (mysqli_num_rows($data) >= 1) {
+            $alert = "Username Sudah Ada";
+        } else {
+            mysqli_query($conn, "INSERT INTO tbl_user (`nama`,`username`,`password`) VALUES ('$nama','$username','$password')");
+            header('location: ../login/index.php');
         }
     }
 }
