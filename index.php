@@ -14,7 +14,12 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <style>
+    .navbar {
+      background: none;
+    }
+  </style>
+  <nav class="navbar navbar-expand-lg ">
     <div class="container-fluid">
       <a class="navbar-brand text-light h1 mb-0 ps-1" href="#">FavNime</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
