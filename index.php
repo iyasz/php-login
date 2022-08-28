@@ -44,13 +44,6 @@
               <li><a class="dropdown-item" href="#">Lebih Banyak</a></li>
             </ul>
           </li>
-
-          <span class="navbar-text opacity-75 col-6 col-lg-auto ms-3">
-            <a class=" pe-2" href="#"><i class="bi bi-facebook"></i></a>
-            <a class=" pe-2" href="#"><i class="bi bi-instagram"></i></a>
-            <a class=" pe-2" href="#"><i class="bi bi-twitter"></i></a>
-            <a class=" pe-2" href="#"><i class="bi bi-discord"></i></a>
-          </span>
         </ul>
       </div>
     </div>
