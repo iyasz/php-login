@@ -23,23 +23,26 @@ include "koneksi.php";
     .navbar {
       background: transparent;
     }
+    .alink a {
+      color: #eaeaea;
+    }
   </style>
-  <nav class="navbar  navbar-expand-lg ">
+  <nav class="navbar text-light navbar-expand-lg ">
     <div class="container-fluid">
       <a class="navbar-brand text-light h1 mb-0 ps-1" href="#">FavNime</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav alink">
           <li class="nav-item">
-            <a class="nav-link active text-light" aria-current="page" href="#">Home </a>
+          <a class="nav-link active " aria-current="page" href="#">Top Destinations </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href="#">Terbaru</a>
+            <a class="nav-link"  href="#">Explore</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link text-light" href="#">Terpopuler</a>
+            <a class="nav-link " href="#">Community</a>
           </li>
           <li class="nav-item dropdown ">
             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
