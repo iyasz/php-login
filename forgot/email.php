@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect('localhost', 'root', '', 'db_logintest');
+include "../koneksi.php";
 
 if(isset($_POST['btn-con'])){
     $email = htmlspecialchars($_POST['inpEmail']);

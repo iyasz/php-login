@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect('localhost', 'root', '', 'db_logintest');
+include "../koneksi.php";
 
 if (isset($_POST['submit'])) {
     $username = htmlspecialchars($_POST['username']);
